@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>The Nexis Realms</title>
+    <link rel="stylesheet" href="bigscreen.css" type="text/css">
+    <link href="tnrlogo.png" rel="shortcut icon" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="gameserver, gameservers, game server, game server unturned, custom, full, shop, Fullshop, unturned, Unturned, creative, pvp, creative pvp, Creative PVP, tpa, home, x3, i, v, save, load, skills, semi-rp, new, awesome, fun, 24/7, twenty four seven">
+    <meta property="og:title" content="The Nexis Realms" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://nexisrealms.com" />
+    <meta property="og:image" content="favicon.png" />
+    <meta property="og:description" content="The Nexis Realms" />
+    <style>
+        body {
+            margin: 0;
+        }
+        /* Navbar Non Existant but can be added
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+            .navbar a {
+                float: left;
+                display: inline;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .navbar a:hover {
+                    background: #ddd;
+                    color: black;
+                }
+            */
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 30px;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        /*Background*/
+        .bg {
+            background-image: url(img/bg.jpg);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: fadein 4s;
+        }
+        /*Front page Text/Buttons*/
+        .toptext {
+            position: absolute;
+            top: 31%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tnr {
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 420%;
+        }
+
+        .bottomtext {
+            position: absolute;
+            top: 47.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .intro {
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 150%;
+        }
+
+        .about {
+            position: absolute;
+            top: 57.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            display: block;
+            width: 180px;
+            height: 50px;
+            border: 3px solid white;
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 1000ms, color 1000ms;
+            text-decoration: none;
+            font-size: 50%;
+        }
+
+            .about:hover {
+                background-color: rgba(255, 255, 255, 1);
+                color: #222222;
+                cursor: pointer;
+                transition: background-color 1000ms, color 1000ms;
+                text-decoration: none;
+            }
+
+        .connect {
+            position: absolute;
+            top: 57.5%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            display: block;
+            width: 180px;
+            height: 50px;
+            border: 3px solid white;
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 1000ms, color 1000ms;
+            text-decoration: none;
+            font-size: 50%;
+        }
+
+            .connect:hover {
+                background-color: rgba(255, 255, 255, 1);
+                color: #222222;
+                cursor: pointer;
+                transition: background-color 1000ms, color 1000ms;
+                text-decoration: none;
+            }
+
+        .discord {
+            position: absolute;
+            top: 57.5%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            display: block;
+            width: 180px;
+            height: 50px;
+            border: 3px solid #7289da;
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 1000ms, color 1000ms;
+            text-decoration: none;
+            font-size: 50%;
+        }
+
+            .discord:hover {
+                background-color: rgba(114, 137, 218, 1);
+                color: #222222;
+                cursor: pointer;
+                transition: background-color 1000ms, color 1000ms;
+                text-decoration: none;
+            }
+
+            .discord_logo {
+                width: 27px;
+                height: 27px;
+                padding-left: 5px;
+            }
+
+        #about {
+            margin-top: 0;
+            padding-top: 50px;
+            padding-right: 10%;
+            padding-left: 10%;
+            text-align: center;
+            background-color: transparent;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f3f3f3;
+            padding-bottom: 110px;
+            animation: fadein 4s;
+        }
+        /*Discord Widget*/
+        .widget {
+            margin-top: 0;
+            padding-top: 50px;
+            padding-right: 10%;
+            padding-left: 3%;
+            animation: fadein 4s;
+        }
+        /*Animation stuff*/
+        .animate-reveal {
+            opacity: 0;
+            -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+            -moz-animation: reveal 1s ease-in 1 normal forwards;
+            -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+            animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+        }
+
+        .animate-first {
+            -webkit-animation-delay: 0;
+            -moz-animation-delay: 0;
+            -o-animation-delay: 0;
+            animation-delay: 0;
+        }
+
+        .animate-second {
+            -webkit-animation-delay: 500ms;
+            -moz-animation-delay: 500ms;
+            -o-animation-delay: 500ms;
+            animation-delay: 500ms;
+        }
+
+        .animate-third {
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -o-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        @-webkit-keyframes reveal {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(100%);
+                -moz-transform: translateY(100%);
+                -o-transform: translateY(100%);
+                transform: translateY(100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+        @-moz-keyframes reveal {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(100%);
+                -moz-transform: translateY(100%);
+                -o-transform: translateY(100%);
+                transform: translateY(100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+        @-o-keyframes reveal {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(100%);
+                -moz-transform: translateY(100%);
+                -o-transform: translateY(100%);
+                transform: translateY(100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(100%);
+                -moz-transform: translateY(100%);
+                -o-transform: translateY(100%);
+                transform: translateY(100%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+        /*Donation Area*/
+        #donate {
+            margin-top: 0;
+            padding-top: 130px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #e2e2e2;
+            animation: fadein 4s;
+            padding-right: 6%;
+            padding-left: 6%;
+        }
+
+        .donatetext {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 40px;
+            margin-top: -15px;
+            font-size: 300%;
+        }
+
+        .container {
+            display: flex;
+        }
+
+            .container > div {
+                flex: 1; 
+            }
+
+        .donate {
+            margin-top: 2%;
+            text-align: center;
+            margin-left: 5%;
+            background-color: #e2e2e2;
+            margin-right: 1%;
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 5px;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /*Bottom Buttons*/
+        .bottombutton {
+            background-color: transparent;
+            color: black;
+            padding: 21px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: background-color 1000ms, color 1000ms;
+            cursor: pointer;
+            border-radius: 3px solid black;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+
+        .top {
+            background-color: transparent;
+            border-radius: 3px;
+            color: black;
+            transition: background-color 1000ms, color 1000ms;
+        }
+
+            .top:hover {
+                background-color: #222222;
+                color: white;
+                border-radius: 3px;
+                transition: background-color 1000ms, color 1000ms;
+            }
+
+        .bottom1 {
+            background-color: transparent;
+            border-radius: 3px;
+            color: black;
+            transition: background-color 1000ms, color 1000ms;
+        }
+
+            .bottom1:hover {
+                background-color: #222222;
+                color: white;
+                border-radius: 3px;
+                transition: background-color 1000ms, color 1000ms;
+            }
+
+        #bottombutton {
+            background-color: #F6F6F5;
+        }
+        /*Front Page TNR Logo*/
+        .main_img {
+            width: 850px;
+            height: 230px;
+        }
+
+        /*.pattern {
+            background: url(/img/pattern.png);
+            background-repeat: repeat;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }*/
+
+    </style>
+</head>
+<body>
+    <!--JS Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Adds smooth scrolling to all links in navbar
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+    <!--Front Page-->
+    <div class="bg" id="top">
+        <div class="toptext"><a href="http://nexisrealms.com"><img src="img/tnr_main.png" class="main_img" /> </a></div>
+        <div class="bottomtext"><h2 class="intro animate-reveal animate-second">An Unturned community</h2></div>
+    </div>
+    <!--Front Page Ends-->
+    <div id="about">
+        <!--Discord Widget-->
+        <div class="widget">
+            <iframe src="https://discordapp.com/widget?id=384855884129501194&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" align="left"></iframe>
+        </div>
+        <!--Discord Widget END-->
+        <h1 style="text-align: center; font-family: 'Open Sans', sans-serif; font-size: 300%;" class="animate-reveal animate-first">About Nexis Realms</h1>
+        <h2 class="animate-reveal animate-second">Nexis Realms about stuff (Not sure what to put here lel)</h2>
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <!--Buttons-->
+    <a href="#about" style="text-decoration: none; color: black; font-family: 'Open Sans', sans-serif; font-size: 200%;" class="animate-reveal animate-third"><button class="about"><strong>About</strong></button></a>
+    <a href="http://discord.nexisrealms.com" style="text-decoration: none; color: black; font-family: 'Open Sans', sans-serif; font-size: 200%;" class="animate-reveal animate-third"><button class="discord"><img src="img/discord_logo.png" class="discord_logo" align="left" /><strong>Join our Discord!</strong></button></a>
+    <a href="steam://connect/nexisrealms.net:27016" style="text-decoration: none; color: black; font-family: 'Open Sans', sans-serif; font-size: 200%;" class="animate-reveal animate-third"><button class="connect"><strong>Connect to PEI</strong></button></a>
+    <!--Buttons END-->
+    <!----------->
+    <!--Donations Stuff BEGINS-->
+    <div id="donate">
+        <h2>Want to support us?</h2>
+        <br>
+        <div class="container animate-reveal animate-third">
+            <div class="donate">
+                <h1 class="donatetext animate-reveal animate-first">Donate! It is the best way to support us!</h1>
+                <br>
+                <div class="donate_buy">
+                    <form class="form_store" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_xclick">
+                                                         <!--EDIT EMAIL BELLOW FOR DONATIONS-->
+                        <input type="hidden" name="business" value="ree@gmail.com">
+                        <input type="hidden" name="lc" value="US">
+                        <input type="hidden" name="item_name" value="Donation to Nexis Realms">
+                        <input type="hidden" name="button_subtype" value="services">
+                        <input type="hidden" name="no_note" value="0">
+                        <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                        <input type="hidden" name="no_shipping" value="2">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+                        <table class="store_table"></table>
+                        <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit" alt="Check out with PayPal">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                    <h2>Donate 5$ USD or more and recieve VIP in our servers!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Donations Stuff END-->
+    <!--------->
+    <!--Bottom buttons-->
+    <div style="text-align: center;" id="bottombutton">
+        <br><br><br><br>
+        <a href="#top" target="_blank" class="bottombutton top">Back to top</a>
+        <a href="http://apply.nexisrealms.com" target="_blank" class="bottombutton bottom1">Apply for Staff(Closed)</a>
+    </div>
+</body>
+</html>
