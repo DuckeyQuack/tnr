@@ -399,24 +399,25 @@ body, html {
 }
 
     .bottom2:hover {
-        background-color: #555555;
-        color: white;
+        background-color: #629C28;
+        color: #B7B240;
         border-radius: 5px;
-        transition: background-color 1000ms, color 1000ms;
+        transition: background-color 3000ms, color 3000ms;
     }
 
 .secretbutton {
     background-color: transparent;
     color: transparent;
-    padding: 2px 3px;
+    padding: 4px 4px 4px 4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin-left: 6px;
+    margin-right: 10px;
     transition: background-color 1000ms, color 1000ms;
     cursor: pointer;
-    border-radius: 3px ;
+    border-radius: 3px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 757px;
     margin-left: 455px;
